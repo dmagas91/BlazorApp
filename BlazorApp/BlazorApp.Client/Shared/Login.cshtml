@@ -1,0 +1,13 @@
+﻿@page "/Login"
+@inject Microsoft.AspNetCore.Blazor.Services.IUriHelper UriHelper
+
+
+<div>
+    <button class="btn-danger" @onclick(Navigate)></button>
+</div>
+@functions {
+    void Navigate(){
+        UriHelper.NavigateTo("/");
+    }
+    public RenderFragment Body { get; set; }
+}
